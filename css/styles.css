@@ -599,7 +599,9 @@ a.fa.fa-angle-down:focus {
 
 #about img#prof-pic {
     width: 170px;
-    height: auto;
+    height: 170px;
+    object-fit: cover;
+    object-position: center top;
 }
 
 #about p {
@@ -718,6 +720,7 @@ a.fa.fa-angle-down:focus {
 @media screen and (max-width: 480px) {
     #about img#prof-pic {
         width: 150px;
+        height: 150px;
     }
     #about #tl-dr {
         width: 90%;
@@ -1204,31 +1207,6 @@ a.fa.fa-angle-down:focus {
     line-height: 1.5;
 }
 
-img#starry-logo,
-img#mullen-logo,
-img#nu-logo {
-    height: auto;
-    display: block;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out
-}
-
-img#starry-logo {
-    width: 180px;
-    margin: 0 auto 10px;
-}
-
-img#mullen-logo {
-    width: 200px;
-    margin: 0 auto 10px;
-}
-
-img#nu-logo {
-    width: 120px;
-    margin: 0 auto;
-}
-
 @media screen and (max-width: 768px) {
     .skills-bar-container {
         width: 100%;
@@ -1237,12 +1215,6 @@ img#nu-logo {
     .employment h3 {
         font-size: 16px;
         margin-bottom: 0;
-    }
-    img#mullen-logo {
-        width: 200px;
-    }
-    img#nu-logo {
-        width: 150px;
     }
 }
 
@@ -1258,8 +1230,154 @@ img#nu-logo {
         display: block;
         width: 100%;
     }
-    img#nu-logo {
-        width: 120px;
+}
+
+
+/* Experience: role cards + education */
+.xp-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    background: #fafafb;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.xp-logo {
+    -ms-flex: 0 0 110px;
+    flex: 0 0 110px;
+    margin-right: 24px;
+    padding-top: 4px;
+}
+
+.xp-logo img {
+    max-width: 110px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+}
+
+.xp-body {
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 0;
+}
+
+.xp-body h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: #222;
+}
+
+.xp-company {
+    font-weight: 400;
+    color: #00009C;
+}
+
+.xp-meta {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.xp-body ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.xp-body li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.xp-section-title {
+    font-weight: 700;
+    font-size: 20px;
+    color: #222;
+    margin: 10px 0 20px;
+    text-align: left;
+}
+
+.edu-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fafafb;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.edu-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.edu-main strong {
+    font-size: 16px;
+    color: #222;
+    font-weight: 700;
+}
+
+.edu-main span {
+    font-size: 13px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.edu-meta {
+    font-size: 13px;
+    color: #888;
+    text-align: right;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+    .xp-card {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .xp-logo {
+        margin: 0 0 14px;
+    }
+    .edu-card {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    .edu-meta {
+        text-align: left;
+        margin-top: 6px;
     }
 }
 
@@ -1378,6 +1496,96 @@ a.resume-btn:active {
     #portfolio .portfolio-item-wrapper {
         width: 100%;
     }
+}
+
+/* Project cards (no screenshots) */
+#portfolio .portfolio-thumb {
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0 4px 14px;
+    padding: 28px 26px 24px;
+    text-align: left;
+    -webkit-transition: -webkit-transform .25s ease, box-shadow .25s ease;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+#portfolio .portfolio-thumb:hover {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+    box-shadow: rgba(0, 0, 0, 0.13) 0 12px 28px;
+}
+
+#portfolio .portfolio-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #00009C;
+    background: rgba(0, 0, 156, 0.08);
+    border-radius: 20px;
+    padding: 5px 12px;
+    margin-bottom: 16px;
+}
+
+#portfolio .portfolio-thumb h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: #222;
+}
+
+#portfolio .portfolio-sub {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    margin: 0 0 14px;
+}
+
+#portfolio .portfolio-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0 0 18px;
+}
+
+#portfolio .portfolio-stack {
+    margin-bottom: 20px;
+}
+
+#portfolio .portfolio-stack span {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #444;
+    background: #f2f2f4;
+    border-radius: 4px;
+    padding: 4px 9px;
+    margin: 0 6px 6px 0;
+}
+
+#portfolio .portfolio-links a {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #00009C;
+    border: 1.5px solid #00009C;
+    border-radius: 4px;
+    padding: 7px 16px;
+    margin: 0 8px 8px 0;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+#portfolio .portfolio-links a:hover {
+    background: #00009C;
+    color: #fff;
+}
+
+#portfolio .portfolio-links a i {
+    margin-right: 5px;
 }
 
 #portfolio .portfolio-item {
@@ -1728,6 +1936,7 @@ ul.social-buttons li a {
     height: 50px;
     font-size: 24px;
     line-height: 50px;
+    text-align: center;
     outline: 0;
     color: rgba(255, 255, 255, 0.8);
     background: #333;
@@ -1735,6 +1944,12 @@ ul.social-buttons li a {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
+}
+
+ul.social-buttons li a img {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
 }
 
 @media screen and (max-width: 480px) {
@@ -1787,37 +2002,11 @@ ul.social-buttons li a:active {
     /*border: 1px solid #fff !important;*/
 }
 
-#facebook:hover {
-    background-color: #3B5998;
-}
-
-#twitter:hover {
-    background-color: #55ACEE;
-}
-
-#instagram:hover {
-    background-color: #3f729b;
-}
-
-#codepen:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-#linkedin:hover {
-    background-color: #0077B5
-}
-
-#github:hover {
-    background-color: #4183C4;
-}
-
-#pinterest:hover {
-    background-color: #CC2127;
-}
-
-#spotify:hover {
-    background-color: #2ebd59;
+#github:hover,
+#linkedin:hover,
+#twitter:hover,
+#leetcode:hover {
+    background-color: #00009C;
 }
 
 #to-top {
