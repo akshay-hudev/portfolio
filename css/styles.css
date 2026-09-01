@@ -1290,16 +1290,29 @@ a.fa.fa-angle-down:focus {
 .employment .places-worked img#capabl-logo {
     max-width: 180px;
     margin-bottom: 30px;
+    -webkit-filter: none;
+    filter: none;
 }
 
 .employment .places-worked img#goai-logo {
     max-width: 180px;
     margin-bottom: 30px;
+    -webkit-filter: none;
+    filter: none;
 }
 
 .employment .places-worked img#annam-logo {
     max-width: 160px;
     margin-bottom: 30px;
+    -webkit-filter: none;
+    filter: none;
+}
+
+.employment .places-worked img#capabl-logo:hover,
+.employment .places-worked img#goai-logo:hover,
+.employment .places-worked img#annam-logo:hover {
+    -webkit-filter: none;
+    filter: none;
 }
 
 .employment .places-worked {
