@@ -1232,6 +1232,43 @@ a.fa.fa-angle-down:focus {
     }
 }
 
+#education {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #fafafa;
+}
+
+#education p {
+    font-size: 16px;
+    padding-bottom: 40px;
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+#technologies {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #fff;
+}
+
+#technologies p {
+    font-size: 16px;
+    padding-bottom: 40px;
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+@media screen and (max-width: 600px) {
+    #education,
+    #technologies {
+        padding: 60px 0px;
+    }
+    #education p,
+    #technologies p {
+        padding-bottom: 20px;
+    }
+}
+
 
 /* Experience: role cards + education */
 .xp-card {
