@@ -1490,6 +1490,22 @@ a.resume-btn:active {
     transition: transform .25s ease, box-shadow .25s ease;
 }
 
+#portfolio .portfolio-screenshot {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: -8px 0 18px;
+    border: 1px solid #ececec;
+    -webkit-transition: -webkit-transform .25s ease, box-shadow .25s ease;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+#portfolio .portfolio-thumb:hover .portfolio-screenshot {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
 #portfolio .portfolio-thumb:hover {
     -webkit-transform: translateY(-6px);
     transform: translateY(-6px);
