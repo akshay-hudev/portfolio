@@ -1233,208 +1233,73 @@ a.fa.fa-angle-down:focus {
 }
 
 #education {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background: #fafafa;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background: #F0F0F0;
 }
 
 #education p {
     font-size: 16px;
-    padding-bottom: 40px;
-    max-width: 600px;
-    margin: 0px auto;
+    margin: 0px auto 8px;
+    color: #555;
 }
 
-#technologies {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background: #fff;
+#education h2 {
+    margin-bottom: 50px;
 }
 
-#technologies p {
-    font-size: 16px;
-    padding-bottom: 40px;
-    max-width: 600px;
-    margin: 0px auto;
+#education h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0 6px;
+    color: #222;
+}
+
+#education .edu-logo {
+    max-width: 140px;
+    margin: 0 auto 10px;
+    display: block;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#education a:hover .edu-logo {
+    -webkit-filter: none;
+    filter: none;
+}
+
+#education .edu-dates {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
 }
 
 @media screen and (max-width: 600px) {
-    #education,
-    #technologies {
+    #education {
         padding: 60px 0px;
     }
-    #education p,
-    #technologies p {
-        padding-bottom: 20px;
+    #education h2 {
+        margin-bottom: 30px;
     }
 }
 
 
-/* Experience: role cards + education */
-.xp-card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    background: #fafafb;
-    border: 1px solid #ececec;
-    border-radius: 8px;
-    padding: 24px 28px;
-    margin-bottom: 20px;
-    text-align: left;
+/* Experience: company logo widths */
+.employment .places-worked img#capabl-logo {
+    max-width: 180px;
+    margin-bottom: 30px;
 }
 
-.xp-logo {
-    -ms-flex: 0 0 110px;
-    flex: 0 0 110px;
-    margin-right: 24px;
-    padding-top: 4px;
+.employment .places-worked img#goai-logo {
+    max-width: 180px;
+    margin-bottom: 30px;
 }
 
-.xp-logo img {
-    max-width: 110px;
-    max-height: 60px;
-    width: auto;
-    height: auto;
-}
-
-.xp-body {
-    -ms-flex: 1;
-    flex: 1;
-    min-width: 0;
-}
-
-.xp-body h3 {
-    font-size: 19px;
-    font-weight: 700;
-    margin: 0 0 4px;
-    color: #222;
-}
-
-.xp-company {
-    font-weight: 400;
-    color: #00009C;
-}
-
-.xp-meta {
-    display: block;
-    font-size: 13px;
-    color: #888;
-    margin-bottom: 12px;
-}
-
-.xp-body ul {
-    margin: 0;
-    padding-left: 18px;
-}
-
-.xp-body li {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 8px;
-}
-
-.xp-section-title {
-    font-weight: 700;
-    font-size: 20px;
-    color: #222;
-    margin: 10px 0 20px;
-    text-align: left;
-}
-
-.edu-card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background: #fafafb;
-    border: 1px solid #ececec;
-    border-radius: 8px;
-    padding: 16px 24px;
-    margin-bottom: 12px;
-    text-align: left;
-}
-
-.edu-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-.edu-main strong {
-    font-size: 16px;
-    color: #222;
-    font-weight: 700;
-}
-
-.edu-main span {
-    font-size: 13px;
-    color: #666;
-    margin-top: 2px;
-}
-
-.edu-meta {
-    font-size: 13px;
-    color: #888;
-    text-align: right;
-    line-height: 1.5;
-    white-space: nowrap;
-}
-
-@media screen and (max-width: 600px) {
-    .xp-card {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-    .xp-logo {
-        margin: 0 0 14px;
-    }
-    .edu-card {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-    }
-    .edu-meta {
-        text-align: left;
-        margin-top: 6px;
-    }
-}
-
-/* Experience section two-column layout */
-@media screen and (min-width: 768px) {
-    #experience .col-sm-6 {
-        float: left;
-    }
-    #experience .col-md-7 {
-        width: 58.33333%;
-    }
-    #experience .col-md-5 {
-        width: 41.66667%;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    #experience .col-sm-6 {
-        width: 100%;
-    }
+.employment .places-worked img#annam-logo {
+    max-width: 160px;
+    margin-bottom: 30px;
 }
 
 .employment .places-worked {
