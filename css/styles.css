@@ -1418,6 +1418,71 @@ a.fa.fa-angle-down:focus {
     }
 }
 
+/* Experience section two-column layout */
+@media screen and (min-width: 768px) {
+    #experience .col-sm-6 {
+        float: left;
+    }
+    #experience .col-md-7 {
+        width: 58.33333%;
+    }
+    #experience .col-md-5 {
+        width: 41.66667%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #experience .col-sm-6 {
+        width: 100%;
+    }
+}
+
+.employment .places-worked {
+    padding-top: 20px;
+}
+
+.employment .places-worked h3 {
+    margin-bottom: 20px;
+}
+
+.employment .places-worked p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.employment .places-worked strong {
+    color: #222;
+}
+
+.employment .places-worked a {
+    text-decoration: none;
+}
+
+.employment .places-worked a:hover {
+    opacity: 0.8;
+}
+
+.employment .places-worked img {
+    max-width: 100%;
+    height: auto;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.employment .places-worked img:hover {
+    -webkit-filter: none;
+    filter: none;
+}
+
+@media screen and (max-width: 767px) {
+    .employment {
+        margin-top: 40px;
+    }
+}
+
 
 /* ======= RESUME ======= */
 
