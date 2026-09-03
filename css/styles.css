@@ -1905,7 +1905,21 @@ a.resume-btn:active {
     border: 2px solid #00009C;
 }
 
-@media screen and (max-width: 480px) {
+#contact .direct-email {
+    margin-top: 15px;
+    color: #666;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    cursor: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+@media screen and (max-width: 767px) {
     #contact {
         padding: 15px 10px 50px;
     }
